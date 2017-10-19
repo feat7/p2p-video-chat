@@ -1,0 +1,34 @@
+{
+  "name": "p2p-video-chat",
+  "version": "1.0.0",
+  "description": "Peer 2 Peer Video Chat with WebRTC",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node --presets es2015 ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feat7/p2p-video-chat.git"
+  },
+  "keywords": [
+    "peer",
+    "p2p",
+    "video",
+    "chat"
+  ],
+  "author": "Vinay Khobragade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/feat7/p2p-video-chat/issues"
+  },
+  "homepage": "https://github.com/feat7/p2p-video-chat#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "easyrtc": "^1.1.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.3"
+  }
+}
