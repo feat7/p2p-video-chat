@@ -53,3 +53,32 @@ let port = nconf.get('port');
  * Create a webserver
  */
 let server = require('http').createServer(app).listen(port);
+
+/**
+ * Socket Server
+ */
+let socketServer = io.listen(server);
+
+/**
+ * ICE SERVERS
+ */
+
+easyrtc.setOption('appIceServers', [
+    {
+        url: 'stun:stun.l.google.com:19302'
+    },
+    {
+        url: 'stun:stun.sipgate.net'
+    },
+    {
+        url: 'stun:217.10.68.152'
+    },
+    {
+        url: 'stun:stun.sipgate.net:10000'
+    },
+    {
+        url: 'stun:217.10.68.152:10000'
+    }
+]);
+
+easyrtc.listen(app, socketServer);
