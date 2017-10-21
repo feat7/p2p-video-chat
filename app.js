@@ -21,6 +21,11 @@ nconf.file('app.config.json');
 let app = express();
 
 /**
+ * Static Files Folder Setup
+ */
+app.use('/public', express.static('public'));
+
+/**
  * Setup Routes
  */
 app.use('/', routes);
